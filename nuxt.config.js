@@ -73,13 +73,13 @@
      // Will register file from project api directory to handle /api/* requires
      {
        path: '/api',
-       handler: '~/api/index.js'
+       handler: '~/api/index'
      },
 
      // We can create custom instances too
      {
        path: '/static',
-       handler: serveStatic(__dirname + './static/test.vue')
+       handler: serveStatic(__dirname + '/static')
      }
    ]
 
