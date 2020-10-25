@@ -1,6 +1,5 @@
 import express from 'express'
 const app = express();
-
 app.get('/hello', (req, res) => {
   // res.send('Hello World!')
 
@@ -15,7 +14,6 @@ app.get('/hello', (req, res) => {
     age: 18,
     interest: 'vue'
   })
-
 })
 
 export default {
