@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+//import axios from "axios";//已在nuxt.config.js中配置axios项
 
 export default {
   data() {
@@ -19,7 +19,8 @@ export default {
   },
   methods: {
     dd() {
-      axios.get("/api/hello").then((res) => {
+      //已在nuxt.config.js中配置axios项,注意prefix，用this.$axios直接调用
+      this.$axios.get("hello").then((res) => {
         this.info = res.data;
         console.log(this.info);
       });

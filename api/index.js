@@ -14,6 +14,8 @@ app.get('/hello', (req, res) => {
     age: 18,
     interest: 'vue'
   })
+
+  res.end('无response时输出！')
 })
 
 export default {

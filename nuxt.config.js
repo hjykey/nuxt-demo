@@ -64,8 +64,21 @@
    // 指定全局样式，用a标签跳转，此处动画效果无效
    css: ['~assets/css/normalize.css'],
 
-   // serverMiddleware: ['~/api/index']
+   modules: [
+     ['@nuxtjs/axios', {
+       prefix: '/api/',
+       proxy: true
+     }],
+     ['@nuxtjs/proxy', {
+       target: 'https://local:1818/',
+       pathRewrite: {
+         '^/api': '/'
+       }
+     }]
+   ],
 
+
+   // serverMiddleware: ['~/api/index']
    serverMiddleware: [
      // Will register redirect-ssl npm package
      // 'redirect-ssl',
