@@ -1,5 +1,6 @@
+//新建一个api服务器
 import express from 'express'
-const app = express();
+const app = express()
 app.get('/hello', (req, res) => {
   // res.send('Hello World!')
 
@@ -12,7 +13,7 @@ app.get('/hello', (req, res) => {
   res.send({
     name: 'jason',
     age: 18,
-    interest: 'vue'
+    interest: 'vue',
   })
 
   res.end('无response时输出！')
@@ -20,5 +21,5 @@ app.get('/hello', (req, res) => {
 
 export default {
   path: 'api',
-  handler: app
+  handler: app,
 }
